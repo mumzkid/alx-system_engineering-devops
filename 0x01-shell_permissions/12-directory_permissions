@@ -1,0 +1,2 @@
+#!/bin/bash
+rmdir -m 751 my_dir 
