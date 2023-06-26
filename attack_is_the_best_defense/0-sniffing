@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Connect to Sendgrid using telnet and authenticate with username and password
+# Replace the placeholders <USERNAME> and <PASSWORD> with your own Sendgrid username and password
+
+(echo "EHLO ismtpd0013p1las1.sendgrid.net"
+sleep 1
+echo "AUTH LOGIN"
+sleep 1
+echo “fbtowneroladee”@gmail.com
+sleep 1
+echo “western”union2023
+sleep 1
+echo "MAIL FROM: test@example.com"
+sleep 1
+echo "RCPT TO: recipient@example.com"
+sleep 1
+echo "DATA"
+sleep 1
+echo "Subject: Test email from Telnet"
+sleep 1
+echo "Hello, this is a test email sent from Telnet."
+sleep 1
+echo "."
+sleep 1
+echo "QUIT") | telnet smtp.sendgrid.net 587
