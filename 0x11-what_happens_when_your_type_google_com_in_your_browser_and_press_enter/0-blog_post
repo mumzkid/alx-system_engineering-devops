@@ -1,0 +1,21 @@
+When you type "https://www.google.com" in your browser and press enter, a lot happens behind the scenes before you see the Google homepage. In this blog post, we will explore the steps involved in this process.
+
+DNS Lookup:
+The first step is the Domain Name System (DNS) lookup. When you type "https://www.google.com" in the address bar, your browser sends a request to a DNS server to resolve the domain name "google.com" into an IP address. This step is necessary because computers communicate using IP addresses, but it's easier for humans to remember domain names.
+
+TCP Connection:
+Once the IP address of the server is obtained, the browser initiates a TCP (Transmission Control Protocol) connection with the server. TCP is responsible for breaking up the data into packets, sending them, and ensuring they are received correctly.
+
+SSL/TLS Handshake:
+If the URL starts with "https," the browser initiates an SSL/TLS handshake with the server. This step is crucial because it ensures that the data transmitted between the browser and the server is encrypted and secure. During the handshake, the browser and server exchange certificates to verify their identities, agree on the encryption algorithm and create a session key.
+
+HTTP Request:
+Once the connection is established and secure, the browser sends an HTTP (Hypertext Transfer Protocol) request to the server for the Google homepage. The request includes information about the browser, such as the user agent, the accepted content types, and any cookies that may be stored.
+
+Server Response:
+The server receives the HTTP request and generates a response. The response includes the HTML, CSS, and JavaScript code that makes up the Google homepage. The server also includes information about the response, such as the content type, status code, and cache control.
+
+Rendering:
+The browser receives the response and starts rendering the webpage. It first parses the HTML code and creates a Document Object Model (DOM) tree, which represents the structure of the webpage. The browser then applies the CSS styles to the elements in the DOM tree and generates a Render Object Model (ROM). Finally, the ROM is rendered on the screen, and you see the Google homepage.
+
+In conclusion, typing "https://www.google.com" in your browser and pressing enter triggers a series of complex processes that involve DNS lookup, TCP connection, SSL/TLS handshake, HTTP request, server response, and rendering. These steps happen in a matter of milliseconds, and you see the Google homepage almost instantaneously. Understanding how these processes work can help you appreciate the technology behind the websites you visit every day.
