@@ -1,21 +1,5 @@
 #!/usr/bin/env bash
-# Installs Nginx with the following configurations:
-#+    Listens on port 80.
-#+    Returns a page containing "Holberton School" when queried
-#++    at the root with a curl GET request.
-
-apt-get update
-apt-get install -y nginx
-
-mkdir /etc/nginx/html
-touch /etc/nginx/html/index.html
-echo "Holberton School" > /etc/nginx/html/index.html
-printf %s "server {
-     listen      80 default_server;
-     listen      [::]:80 default_server;
-     root        /etc/nginx/html;
-     index       index.html index.htm;
-}
-" > /etc/nginx/sites-available/default
-
+# a Bash script that configures a new Ubuntu machine that installs nginx on web-01 server, nginx listens to port 80, return a page that contains the string Holberton School when querying Nginx at its root / with a GET request (requesting a page) using curl
+apt-get -y install nginx
+echo "Holberton School for the win!" | tee /usr/share/nginx/html/index.html > /dev/null
 service nginx restart
